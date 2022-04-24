@@ -7,7 +7,7 @@ sys.argv = sys.argv[1:]
 for path, folders, files in os.walk(sys.argv[0]):
     if 'node_modules' in folders:
         try:
-            if len(sys.argv) > 1 and sys.argv[1] == '--delete-all':
+            if len(sys.argv) > 1 and sys.argv[1] == '--automatic':
                     shutil.rmtree(path + '/node_modules')
 
             else:
